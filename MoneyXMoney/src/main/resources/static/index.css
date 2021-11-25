@@ -11,11 +11,11 @@
     position: relative;
       /*width: 100%;
         min-height: 100vh;*/
-        height:80vh;
+        height:50vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(imagehome.jpg);
+    background-image: url(imagehomee.jpg);
     background-size: cover;
 }
 
@@ -55,7 +55,7 @@ header{
     list-style: none;
 }
 .navbar a{
-    color: /*#33ad07;*/black;
+    color: /*#33ad07;*/#ffff;
     text-decoration: none;
     margin-left: 30px;
     font-weight: 700;
@@ -265,14 +265,14 @@ header.sticky .menuToggle{
 
 .images{
 margin-left: 500px;
-padding-top:80px;
+padding-top:60px;
 
 }
 
 footer{
 
 background-color: #c2c2c2;
-height: 250px;
+height:200px;
 }
 
 p {
