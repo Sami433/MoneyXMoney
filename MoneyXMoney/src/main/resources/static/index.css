@@ -11,11 +11,11 @@
     position: relative;
       /*width: 100%;
         min-height: 100vh;*/
-        height:50vh;
+        height:80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(imageabout2.jpg);
+    background-image: url(imagehome.jpg);
     background-size: cover;
 }
 
@@ -55,7 +55,7 @@ header{
     list-style: none;
 }
 .navbar a{
-    color: #33ad07;
+    color: /*#33ad07;*/black;
     text-decoration: none;
     margin-left: 30px;
     font-weight: 700;
