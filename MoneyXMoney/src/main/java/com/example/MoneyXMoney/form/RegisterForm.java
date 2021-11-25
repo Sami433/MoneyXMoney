@@ -8,14 +8,14 @@ import javax.validation.constraints.Size;
 
 @Data
 public class RegisterForm {
-    @NotNull
-    @NotBlank
+    /*@NotNull
+    @NotBlank*/
     String email;
     String firstName;
     String lastName;
-    @NotNull
+   /* @NotNull
     @NotBlank
-    @Size(min = 5, max = 30, message = "Invalid password. Must be between 5 and 30 characters.")
+    /*@Size(min = 5, max = 30, message = "Invalid password. Must be between 5 and 30 characters.")*/
     String password;
     String confirmPassword;
 }

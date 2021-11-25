@@ -55,7 +55,7 @@ header{
     list-style: none;
 }
 .navbar a{
-    color: /*#33ad07;*/#ffff;
+    color: #33ad07;
     text-decoration: none;
     margin-left: 30px;
     font-weight: 700;

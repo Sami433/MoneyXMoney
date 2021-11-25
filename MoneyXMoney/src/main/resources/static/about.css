@@ -13,7 +13,7 @@ body{
 }
 
 
-
+/*
 blink {
   -webkit-animation: 2s linear infinite condemed_blink_effect; // pour Safari 4.0-8.0
   animation: 0.5s linear infinite condemed_blink_effect;
@@ -42,7 +42,7 @@ blink {
   }
 }
 
-
+*/
 nav{
     display:flex;
     flex-wrap:wrap;
