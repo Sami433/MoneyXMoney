@@ -58,15 +58,16 @@ public class UserController {
         return "login";
     }
 
+
     @GetMapping("/about")
     public String about (){
         return "about";
     }
 
-    @GetMapping("/test")
+    @GetMapping("/shop")
     public String accountForm(Model model, Account account) {
         model.addAttribute("account", account);
-        return "test";
+        return "shop";
     }
 
 
