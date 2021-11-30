@@ -17,6 +17,7 @@ public class Account {
     private Integer accountId;
     private Double amount;
     private String iban;
+    private String address;
     @OneToOne
     User user;
 

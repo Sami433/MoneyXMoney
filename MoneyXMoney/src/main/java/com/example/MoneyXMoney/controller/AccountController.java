@@ -38,7 +38,11 @@ public class AccountController {
         return "add_account_success";
     }
 
-
+    @GetMapping("/process_shop")
+    public String processShop(Account account) {
+        accountService.shop(account);
+        return "add_account_success";
+    }
 
 
 }

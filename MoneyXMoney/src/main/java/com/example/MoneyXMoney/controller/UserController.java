@@ -64,11 +64,10 @@ public class UserController {
     }
 
     @GetMapping("/test")
-    public String test(){
+    public String accountForm(Model model, Account account) {
+        model.addAttribute("account", account);
         return "test";
     }
-
-
 
 
     @GetMapping("/profile")

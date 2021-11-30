@@ -53,7 +53,7 @@ public class AccountService {
         String username = springUser.getUsername();
         Optional<User> user = userRepository.findByEmail(username);
         int id = user.get().getId();
-        double amount = user.get().getAccount().getAmount() - account.getAmount();
+        double amount = user.get().getAccount().getAmount() - 50;
         String iban = account.getIban();
         if (amount < 0) throw new ArithmeticException("Empty account");
         else {
@@ -62,6 +62,23 @@ public class AccountService {
 
         }
 
+
+    }
+
+    public void shop (Account account) {
+        org.springframework.security.core.userdetails.User springUser = (org.springframework.security.core.userdetails.User) SecurityContextHolder
+                .getContext().getAuthentication().getPrincipal();
+        String username = springUser.getUsername();
+        Optional<User> user = userRepository.findByEmail(username);
+        int id = user.get().getId();
+        double amount = user.get().getAccount().getAmount() - 50;
+        String iban = account.getIban();
+        if (amount < 0) throw new ArithmeticException("Empty account");
+        else {
+            accountRepository.setAmountByUserId(amount, iban, id);
+
+
+        }
 
     }
 }
