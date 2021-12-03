@@ -39,7 +39,7 @@ public class AccountService {
         int id = user.get().getId();
         double amount = user.get().getAccount().getAmount() + account.getAmount();
         String iban = account.getIban();
-        if (amount > 5000) throw new ArithmeticException("excessive amount");
+        if (amount > 5000) throw new ArithmeticException("EXCESSIVE AMOUNT");
         else {
             accountRepository.setAmountByUserId(amount, iban, id);
 
@@ -55,7 +55,7 @@ public class AccountService {
         int id = user.get().getId();
         double amount = user.get().getAccount().getAmount() - account.getAmount();
         String iban = account.getIban();
-        if (amount < 0) throw new ArithmeticException("insufficient amount on your account");
+        if (amount < 0) throw new ArithmeticException("INSUFFICIENT AMOUNT ON YOUR ACCOUNT");
         else {
             accountRepository.setAmountByUserId(amount, iban, id);
 
@@ -73,7 +73,7 @@ public class AccountService {
         int id = user.get().getId();
         double amount = user.get().getAccount().getAmount() - 20;
         String iban = account.getIban();
-        if (amount < 0) throw new ArithmeticException("insufficient amount on your account");
+        if (amount < 0) throw new ArithmeticException("INSUFFICIENT AMOUNT ON YOUR ACCOUNT");
         else {
             accountRepository.setAmountByUserId(amount, iban, id);
 
