@@ -20,3 +20,14 @@ margin-left:550px;
 
 
 }
+
+body{
+background-image: url("fondecran2.jpg");
+background-size: cover;}
+
+.titre{
+font-family: 'Bungee Inline', cursive;
+height: 25px;
+
+
+}

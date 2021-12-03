@@ -1,5 +1,6 @@
 body{
-background-color:#eaefde;
+background-image: url("fondecran2.jpg");
+background-size: cover;
  cursor: none;
 }
 
@@ -117,3 +118,9 @@ font-family:cursive;
 
 
 
+.titre{
+font-family: 'Bungee Inline', cursive;
+height: 23px;
+
+
+}
