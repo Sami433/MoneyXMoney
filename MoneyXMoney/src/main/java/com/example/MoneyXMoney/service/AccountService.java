@@ -71,7 +71,7 @@ public class AccountService {
         String username = springUser.getUsername();
         Optional<User> user = userRepository.findByEmail(username);
         int id = user.get().getId();
-        double amount = user.get().getAccount().getAmount() - 50;
+        double amount = user.get().getAccount().getAmount() - 20;
         String iban = account.getIban();
         if (amount < 0) throw new ArithmeticException("Empty account");
         else {
