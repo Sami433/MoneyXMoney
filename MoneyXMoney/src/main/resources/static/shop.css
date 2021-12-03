@@ -152,3 +152,19 @@ padding-left:450px;
 
 }
 
+
+
+@media screen and (max-width:700px){
+
+.images{  padding-left:15px;
+
+}
+
+.sub{ padding-left:70px;
+
+}
+
+
+
+}
+

@@ -260,3 +260,12 @@ blink {
     }
 }
 
+
+@media screen and (max-width:700px){
+
+.bb { margin-left: -50px;
+
+}
+
+
+}

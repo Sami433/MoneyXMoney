@@ -193,3 +193,17 @@ margin-right:-50px;
     }
 }
 
+
+@media screen and (max-width:700px){
+
+.connection{  margin-right: -200px;
+
+}
+.send{ margin-left:-100px;      }
+
+.sub{ margin-left:80px;
+
+
+      }
+
+}
