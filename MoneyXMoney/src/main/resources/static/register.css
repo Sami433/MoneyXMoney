@@ -8,3 +8,12 @@ width:90em;
 
 
 }
+
+body{
+background-image: url("fondregister.jpg");
+background-size: cover;
+margin:0 auto;
+width: 100%;
+overflow-x: hidden
+}
+
