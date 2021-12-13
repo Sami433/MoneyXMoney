@@ -3,7 +3,15 @@ font-family: 'Bungee Inline', cursive;
 height: 25px;
 
 
+
 }
+
+.nomproduit{
+
+font-family:'Bungee Inline', cursive;
+}
+
+
 .option {
 
   background-color:#157347;
@@ -169,6 +177,8 @@ padding-left:450px;
 .sub{ padding-left:70px;
 
 }
+
+
 
 
 

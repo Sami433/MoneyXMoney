@@ -2,6 +2,7 @@ package com.example.MoneyXMoney.controller;
 
 import com.example.MoneyXMoney.form.RegisterForm;
 import com.example.MoneyXMoney.model.Account;
+import com.example.MoneyXMoney.model.Buyer;
 import com.example.MoneyXMoney.model.User;
 import com.example.MoneyXMoney.repository.AccountRepository;
 import com.example.MoneyXMoney.repository.UserRepository;
@@ -11,8 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -83,6 +83,20 @@ public class UserController {
         model.addAttribute("account", account);
         return "profile";
 
+    }
+
+
+    @RequestMapping(value = "/saveUser", method = RequestMethod.POST)
+    public ModelAndView save(@ModelAttribute Buyer user)
+    {
+        System.out.println("Informations de l'acheteur = " + user);
+        /*
+         * Here you can write the code to save the user information in database
+         */
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("user_information");
+        modelAndView.addObject("user", user);
+        return modelAndView;
     }
 
 
