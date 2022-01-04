@@ -1,186 +1,121 @@
-.titre{
-font-family: 'Bungee Inline', cursive;
-height: 25px;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 
+
+
+body {
+
+                
+                background-color:#65935e;
+            }
+
+    li:hover {
+
+                text-decoration: underline;
+
+            }
+
+.option   {
+margin-top:-0.2%;
 
 
 }
 
-.nomproduit{
+ 
 
-font-family:'Bungee Inline', cursive;
+            .option span {
+                animation: clignote 0.8s linear infinite;
+                font-family: 'Rock Salt', cursive;
+            }
+
+            @keyframes clignote {
+                10% {
+                    opacity: 0;
+                }}
+
+            .option {
+
+                margin-left: 42%;
+                margin-bottom: 8%;
+
+
+
+            }
+
+
+
+            .icone{
+            
+  animation-duration: 30s;
+  animation-name: slidein;
 }
 
-
-.option {
-
-  background-color:#157347;
-  border: none;
-  color: white;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 25px;
-  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-  margin: 5px 15px 15px 15px;
-  margin-left:640px;
-  margin-top:120px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  font-family:cursive;
-
-}
-
-
-
-body{
-background-image: url("fondecran2.jpg");
-background-size: cover;
-margin:0 auto;
-width: 100%;
-overflow-x: hidden
-}
-
-.bb{
-margin-left:550px;
-
-}
-
-
-
-
-
-
-
-
-blink {
-  -webkit-animation: 1s linear infinite condemed_blink_effect; // pour Safari 4.0-8.0
-  animation: 1s linear infinite condemed_blink_effect;
-}
-@-webkit-keyframes condemed_blink_effect { // pour Safari 4.0-8.0
-  0% {
-    visibility: hidden;
+@keyframes slidein {
+  from {
+    margin-left: 0%;
+   
   }
-  50% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
 
-  }
-}
-@keyframes condemed_blink_effect {
-  0% {
-    visibility: hidden;
-  }
-  50% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
+  to {
+    margin-left: 100%;
+    
   }
 }
 
+            
+            @media (max-width: 1000px) {
 
+                .option{
 
+margin-left:20%;
+margin-bottom: 15%;
 
+                }
 
+                .nomproduit
+{
 
-
-
-
-
-
-.cursor {
-    width: 40px;
-    height: 40px;
-    border: 1px dashed white;
-    border-radius: 50%;
-    position: absolute;
-    animation: Anim1 1s infinite alternate;
-  pointer-events: none;
-}
-
-.cursor::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 5px;
-    height: 5px;
-    background: black;
-    border-radius: 50%;
-}
-
-.expand {
-    animation: Anim2 .5s;
-    background: #157347;
-    border: 1px solid #157347;
-}
-@keyframes Anim1 {
-    from {
-        transform: scale(1) rotate(0deg);
-    }
-    to {
-        transform: scale(0.7) rotate(190deg);
-    }
-}
-
-@keyframes Anim2 {
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(2);
-    }
-    100%{
-        transform: scale(1);
-        opacity:0;
-    }
-}
-
-
-.sub{
-
-  font-size: 12px;
-  font-family:cursive;
-  padding-left:550px;
-
+margin-left:2em;
+margin-top:3em;
 
 }
+            }
 
-.images{
+            
 
-margin-top:150px;
-margin-bottom:50px;
-padding-left:450px;
-
+.row img{
+transition: transform .1s;
 }
 
+.row img:hover{
 
-
-@media screen and (max-width:700px){
-
-.images{  padding-left:15px;
-
+transform: scale(1.35);
 }
+            
+            .logo {
+                font-family: 'Bungee Inline', cursive;
+            }
 
-.sub{ padding-left:70px;
+            .nomproduit {
 
-}
+                font-family: 'Bangers', cursive;
+            
+            }
 
+            .sub {
+                margin-top: 2%;
 
+            }
 
+            .row3 {
+                margin-top: -7%;
 
+            }
 
-}
+            .sub{
+
+                margin-top: 1%;
+            }
 

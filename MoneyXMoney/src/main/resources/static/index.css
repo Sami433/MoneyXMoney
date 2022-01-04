@@ -1,309 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
-    scroll-behavior: smooth;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: poppins;
+}
+html {
+	scroll-behavior: smooth;
+}
+ul, .nav {
+	list-style: none;
 }
 
-.banniere{
-    position: relative;
-      /*width: 100%;
-        min-height: 100vh;*/
-        height:50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(imagehomee.jpg);
-    background-size: cover;
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
 }
-
-p{
-    font-weight: 300;
-    color: #111;
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 110px 100px;
 }
-
-header{
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    padding: 20px 10px;
-    width: 100%;
-    z-index: 1;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    transition: 0.5s;
+@media (max-width: 1000px) {
+	section {
+		padding: 100px 50px;
+	}
 }
-
-.logo{
-    color: #fff;
-    font-weight: bold;
-    font-size: 2em;
-    text-decoration: none;
+@media (max-width: 600px) {
+	section {
+		padding: 125px 30px;
+	}
 }
-.logo span{
-    color: #33ad07;
+section p {
+	max-width: 800px;
+	text-align: center;
+	margin-bottom: 35px;
+	padding: 0 20px;
+	line-height: 2;
 }
+/*header*/
 
-.navbar{
-    display: flex;
-    position: relative;
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	padding: 35px 100px 0;
 }
-.navbar li{
-    list-style: none;
+header h2 {
+	text-transform: uppercase;
+	font-family: "Shizuru", cursive;
 }
-.navbar a{
-    color: #6c6c6d;
-    text-decoration: none;
-    margin-left: 30px;
-    font-weight: 700;
+header .nav {
+	display: flex;
 }
-
-.contenu p:nth-child(2){
-    color: #ffff;
-    font-size: 1.2em;
+header .nav li {
+	margin: 0 15px;
 }
-
-section{
-    padding: 100px;
-}
-.row{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.row .col50{
-    position: relative;
-    width: 48%;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.row .col50 h2{
-    margin-bottom: 20px;
-}
-
-.titre-texte{
-    color: #000;
-    font-size: 2em;
-    font-weight: 300px;
-    text-transform: capitalize;
-}
-
-.titre-texte span{
-    color: #33ad07;
-    font-size: 1.5em;
-    font-weight: 700px;
-}
-
-.row .col50 img{
-    height: 450px;
-    width: 600px;
-    position: relative;
-}
-
-.titre{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-
-.blanc .titre-texte{
-    color: #fff;
-}
-
-.blanc .titre-texte,
-.blanc p{
-    color: #fff;
-}
-
-
-
-
-header.sticky{
-    background: #fff;
-    padding: 10px 10px;
-    box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
-}
-
-
-
-header.sticky .logo{
-    color: #000;
-}
-
-
-
-@media (max-width: 991px) {
-header,
-header.sticky{
-    padding: 10px 20px;
-}
-
-header .navbar li{
-    margin-left: 0px;
-}
-
-header .navbar li a {
-    text-decoration: none;
-    color: #111;
-    font-size: 1.6em;
-    font-weight: 300;
-}
-
-.navbar{
-    display: none;
-}
-section{
-    padding: 20px;
-
-}
-
-header .navbar.active{
-    width: 100%;
-    height: calc(100% -68px);
-    position: fixed;
-    top: 68px;
-    left:0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background: #ffff;
-    align-items: center;
-}
-
-.menuToggle{
-    position: relative;
-    width: 40px;
-    height: 40px;
-    background-image: url(./images/menu.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    background-size: 30px;
-}
-
-.menuToggle.active
+header .nav li:hover
 {
-    background-image: url(./images/close.png);
-    background-size: 25px;
-    background-repeat: no-repeat;
-    background-origin: center;
-}
 
-header.sticky .menuToggle{
-    filter: invert(1);
-}
-
-
-.banniere .contenu h2{
-    font-size: 2em;
-}
-
-.row .col50 img{
-    margin-left: 18%;
-}
-
-.contenu p:nth-child(2){
-    font-size: 1.2em;
-}
-.expert{
-    margin-top: 0px;
-}
-
-.menu{
-    margin-top: 0px;
-}
-
-.row{
-    display: flex;
-    flex-direction: column;
-}
-
-
-
-
-    .row .col50 {
-        position: relative;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px;
-
-    }
-
-    .row{
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 480px)
-{
-    .banniere .contenu h2{
-        font-size: 2.2em;
-        color: #fff;
-    }
-
-    .titre-text{
-        color: #000;
-        font-size: 2rem;
-        font-weight: 300;
-        text-transform: capitalize;
-    }
+text-decoration: underline;
 
 }
-
-
-.images{
-margin-left: 500px;
-padding-top:60px;
-
+header .nav li:first-child {
+	margin-left: 0;
 }
-
-footer{
-
-background-color:#c4c4c4;
-height:200px;
+header .nav li:last-child {
+	margin-right: 0;
 }
-
-p {
-font-family: 'Lobster', cursive;
-  animation-duration: 30s;
-  animation-name: glissement;
-  animation-iteration-count: infinite;
+@media (max-width: 1000px) {
+	header {
+		padding: 20px 50px;
+	}
 }
-@keyframes glissement {
-  from {
-    margin-top: 50%;
-    width: 100%;
+@media (max-width: 700px) {
+	header {
+		flex-direction: column;
+	}
+	header h2 {
+		margin-bottom: 15px;
+	}
+	header .nav li {
+		margin: 0 7px;
+	}
+}
+/*----------------
+ 	banner-area Section
+----------------*/
+
+.banner-area {
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
+	text-align: center;
+}
+.banner-area .banner-img {
+	background-image: url('fond.jpg');
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -1;
+}
+.banner-area .banner-img:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.75;
+}
+.banner-area h1 {
+	font-size: 2.5em;
+	font-weight: 700;
+	 font-family: "Shizuru", cursive;
+	font-size: 45px;
+	margin-bottom:5%;
+	letter-spacing: 2px;
+	background: linear-gradient(to left, #000000, #fff, rgb(0, 131, 33));
+	background-repeat: no-repeat;
+	background-size: 80%;
+	animation: animate 2s infinite;
+	-webkit-background-clip: text;
+	color: rgba(255, 255, 255, 0.2);
   }
-
-  to {
-    margin-top: 0%;
-    width: 100%;
+  @keyframes animate {
+	
+	100% {
+	  background-position: 500%;
+	}
   }
+  
+  
+
+.banner-area h3 {
+	margin-bottom: 40px;
+	font-size: 25px;
+	font-family: 'Frijole', cursive;
+}
+.banner-area a.banner-btn {
+	padding: 15px 35px;
+	background: green;
+	border-radius: 50px;
+	text-transform: uppercase;
+	font-family:'Frijole', cursive; 
+}
+	.banner-area a.banner-btn2 {
+		padding: 15px 55px;
+		margin-top:10px;
+		background: white;
+		border-radius: 50px;
+		text-transform: uppercase;
+		font-family:'Frijole', cursive; 
+		color: green;
+
+}
+@media (max-width: 800px) {
+	.banner-area {
+		min-height: 600px;
+	}
+	.banner-area h1 {
+		font-size: 32px;
+	}
+	.banner-area h3 {
+		font-size: 20px;
+	}
+	.banner-area a.banner-btn {
+		padding: 15px 40px;
+		
+	}
+}
+/*about area*/
+
+ul.about-content {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.about-content li {
+	padding: 20px;
+	height: 290px;
+	border-radius: 3px;
+	background-clip: content-box;
+	background-size: cover;
+	background-position: center;
+}
+.about-left {
+	flex-basis: 40%;
+	background-image: url('imagehome.jpg');
+}
+.about-right {
+	flex-basis: 60%;
+}
+
+.about-area h3{
+
+	font-family: 'Fredericka the Great', cursive;}
+
+.about-area p {
+	max-width: 800px;
+	margin-bottom: 35px;
+	line-height: 1.5;
+	text-align: left;
+	padding-left: 0;
+	font-family: 'Fredericka the Great', cursive;
+}
+.section-title {
+	text-transform: uppercase;
+	font-size: 50px;
+	margin-bottom: 5%;
+}
+.about-right h2 {
+	margin-bottom: 3%;
+	font-family: 'Fredericka the Great', cursive;
+}
+
+.about-area{
+
+margin-top:-5%;
+
 }
 
 
-@media screen and (max-width:700px){
+.about-btn {
+	padding: 15px 35px;
+	background: green;
+	border-radius: 50px;
+	text-transform: uppercase;
+	color: #fff;
+}
+@media (max-width: 1000px) {
+	.about-left, .about-right {
+		flex-basis: 100%;
+	}
+	.about-content li {
+		padding: 8px;
+	}
+}
+/*services area*/
 
-.banniere{   background-image: url(fondindex2.jpg);
+.reseaux-area h3{
+
+	font-family: 'Fredericka the Great', cursive;
 }
 
-footer{
-
-background-color:white;
+#reseaux {
+	background: #ddd;
+}
+ul.reseaux-content {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.reseaux-content li {
+	padding: 0 30px;
+	flex-basis: 33%;
+	text-align: center;
 }
 
 
 
+@media (max-width: 1000px) {
+	.reseaux-content li {
+		flex-basis: 100%;
+		margin-bottom: 65px;
+	}
+	.reseaux-content li:last-child {
+		margin-bottom: 0;
+	}
+
 }
+/*conatct area*/
+
+.contact-area h3{
+
+	font-family: 'Fredericka the Great', cursive;
+}
+
+#contact {
+	background: #fff;
+}
+ul.contact-content {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.contact-content li {
+	padding: 0 30px;
+	flex-basis: 33%;
+	text-align: center;
+}
+.contact-content li i {
+	font-size: 50px;
+	color: green;
+	margin-bottom: 25px;
+}
+.contact-content li h4 {
+	color: #555;
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+.contact-content li p {
+	margin: 0;
+}
+@media (max-width: 1000px) {
+	.contact-content li {
+		flex-basis: 100%;
+		margin-bottom: 65px;
+	}
+	.contact-content li:last-child {
+		margin-bottom: 0;
+	}
+	.contact-content li p {
+		padding: 0;
+	}
+}
+/*footer*/
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+	padding: 60px 0;
+}
+
+
+.loader {
+    text-align: center;
+}
+.loader span {
+    display:inline-flex;
+	margin-right: 150px;
+	
+
+	
+background:url("photo.png");
+  background-size: contain;
+    
+ animation: loader 25s infinite  linear;
+   
+}
+
+ 
+
+ .loader {
+    text-align: center;
+}
+.loader span {
+    display:inline-flex;
+	margin-right: 150px;
+	
+
+	
+background:url("dollar.png");
+  background-size: contain;
+    
+ animation: loader 25s infinite  linear;
+   
+}
+
+.loader span:nth-child(2) {
+	animation-delay: 1.2s;
+}
+
+
+@keyframes loader {
+  0% {
+    width: 150px;
+    height: 150px;
+    opacity: 0.5;
+
+	transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    width: 150px;
+    height: 150px;
+    opacity: 1;
+
+	transform: translate(100px, 600px) rotateZ(270deg); 
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+
+	transform: translate(150px, 800px) rotateZ(360deg);
+  }
+} 

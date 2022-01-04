@@ -1,5 +1,39 @@
+.container{
+
+        margin-top:5%;
+        
+            }
+
+
 .formulaire{
-margin-left:300px;
+margin-left:25%;
+margin-top: 5%;
+font-size: x-large;
 
 
 }
+
+
+.btn{
+
+margin-top: 5%;
+
+}
+
+h1{
+    font-family: 'Permanent Marker', cursive;
+color:green;
+}
+
+
+
+@media (max-width: 1000px) {
+.formulaire {
+
+margin-left: 2%;
+
+}
+	}
+
+
+

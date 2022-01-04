@@ -1,85 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="moneyfav.png"/>
+    <title>Money X Money</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,900;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
-    <link rel = "preconnect" href = "https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>MoneyXMoney</title>
-<body>
-<header>
-    <a href="#" class="logo"><span>M</span>oney <span>X</span>&nbsp;<span>M</span>oney</a>
-    <div class="menuToggle" onclick="toggleMenu();"></div>
-    <ul class="navbar">
-        <li><a th:href="@{/profile}" onclick="toggleMenu();">Profile</a></li>
-        <li><a th:href="@{/account}" onclick="toggleMenu();">Account</a></li>
-        <li><a th:href="@{/transfer}" onclick="toggleMenu();">Transaction</a></li>
-        <li><a th:href="@{/shop}" onclick="toggleMenu();">Shop</a></li>
-        <li><a th:href="@{/about}" onclick="toggleMenu();">About Us</a></li>
-        <li><a th:href="@{/login}" onclick="toggleMenu();">Login</a></li>
+<link rel="stylesheet" href="navstyle.css">
 
+
+
+</head>
+<body>
+
+<header>
+    <h2><a href="#">Money X Money</a></h2>
+    <ul class='nav'>
+        <li><a th:href="@{/home}">Home</a></li>
+        <li><a th:href="@{/profile}">Profile</a></li>
+        <li><a th:href="@{/account}">Account</a></li>
+        <li><a th:href="@{/transfer}">Transfer</a></li>
+        <li><a th:href="@{/shop}">Shop</a></li>
     </ul>
 </header>
-<section class="banniere" id="banniere">
-    <!--<div class="contenu">
-        <h2>Que Des Plats Délicieux</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <a href="#" class="btn1">Notre Menu</a>
-        <a href="#" class="btn2">Reservation</a>
-    </div>-->
-</section>
-<section class="apropos" id="apropos">
-    <div class="row">
-        <div class="col50">
-            <h2 class="titre-texte"><span>A</span> Propos De Money X Money</h2>
-            <p>Money X Money vous permet de virer de l'argent vers un autre utilisateur. Vous devez établir une connection
-                avec ce dernier en cliquant sur le bouton "Add Connection" et en ajoutant le mail de l'utilisateur vers lequel
-                vous souhaiter transférer de l'argent. Sur la page  "Account" vous pouvez mettre ou retirer de l'argent sur
-                votre compte grâce aux fonctions "Deposit Money" et "Withdraw Money".
-            </p>
-        </div>
-        <div class="col50">
-            <div class="img">
-                <img src="imageabout.jpg"/>
-            </div>
-        </div>
-    </div>
+<section class="banner-area">
+    <div class="banner-img"></div>
+    <h1>MONEY X MONEY</h1>
+    <h3>Transfer your Money</h3>
+    <a th:href="@{/register}" class="banner-btn">Register</a>
+    <a th:href="@{/login}" class="banner-btn2">Login</a>
 </section>
 
+<div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<section class="about-area" id="about">
+    <h3 class="section-title">About Us</h3>
+    <ul class="about-content">
+        <li class="about-left"></li>
+        <li class="about-right">
+            <h2>A propos de Money X Money</h2>
+            <p>Money X Money vous permet de virer de l'argent vers une tierce personne aisément.
+                Il vous suffit simplement d'établir une connection avec un utilisateur et vous pourrez lui
+                transférer de l'argent facilement!</p>
+            <a th:href="@{/contact}" class="about-btn">Contact Us</a>
+        </li>
+    </ul>
+</section>
+<section class="reseaux-area" id="reseaux">
+    <h3 class="section-title">Social Networks</h3>
+    <ul class="reseaux-content">
+        <li>
+            <a href="https://fr-fr.facebook.com/"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png"  width="130" height="130" /></a>
 
+        </li>
+        <li>
+            <a href="https://www.instagram.com/?hl=fr"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png"  width="130" height="130" /></a>
+
+        </li>
+        <li>
+            <a href="https://twitter.com/?lang=fr"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png"  width="130" height="130" /></a>
+
+        </li>
+    </ul>
+</section>
+
+<section class="contact-area" id="contact">
+    <h3 class="section-title">Contact</h3>
+    <ul class="contact-content">
+        <li>
+            <i class="fa fa-map-marker"></i>
+            <p>Marseille, FR</p>
+        </li>
+        <li>
+            <i class="fa fa-phone"></i>
+
+            <p>0767113418</p>
+        </li>
+        <li>
+            <i class="fa fa-envelope"></i>
+
+            <p>moneyxmoney@gmail.com</p>
+        </li>
+    </ul>
+</section>
 <footer>
-
-    <div class="images">
-
-        <a href="https://fr-fr.facebook.com/" >
-            <img src="124010.png" alt="img" height="120" width="120" />
-        </a>
-        <a href="https://twitter.com/?lang=fr" >
-            <img src="124021.png" alt="img2" height="120" width="120" />
-        </a>
-        <a href="https://fr.linkedin.com/" >
-            <img src="images.png" alt="img3" height="120" width="120" />
-        </a>
-
-    </div>
-
+    <p>All Right Reserved By Money X Money</p>
 </footer>
-
-<script type="text/javascript">
-     window.addEventListener('scroll', function(){
-         const header =document.querySelector('header');
-         header.classList.toggle("sticky", window.scrollY > 0 );
-     });
-
-     function toggleMenu(){
-         const tmenuToggle = document.querySelector('.menuToggle');
-         const navbar = document.querySelector('.navbar');
-         navbar.classList.toggle('active');
-         menuToggle.classList.toggle('active');
-     }
- </script>
 </body>
 </html>
+
+
+
+

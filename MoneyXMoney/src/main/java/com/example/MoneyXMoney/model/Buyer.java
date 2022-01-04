@@ -6,6 +6,8 @@ public class Buyer
     private String name;
     private String address;
     private String productName;
+    private String clothingSize;
+
 
 
 
@@ -30,19 +32,26 @@ public class Buyer
         return productName;
     }
 
-    public void setlProductName(String productName) {
-        this.productName = productName;
+    public void setlClothingSize(String clothingSize) {
+        this.clothingSize = clothingSize;
+    }
+    public String getClothingSize() {
+        return clothingSize;
+    }
+
+    public void setClothingSize(String clothingSize) {
+        this.clothingSize = clothingSize;
     }
 
 
 
 
 
-
-    public Buyer(String name, String address, String productName) {
+    public Buyer(String name, String address, String productName, String clothingSize) {
         this.name = name;
         this.address = address;
         this.productName = productName;
+        this.clothingSize=clothingSize;
     }
 
 
@@ -55,10 +64,11 @@ public class Buyer
     @Override
     public String toString()
     {
-        return "User [name=" + name + ", address=" + address +" , productName= "+productName+ "]";
+        return "User [name=" + name + ", address=" + address + ", productName=" + productName + ", clothingSize=" + clothingSize + "]";
 
 
 
     }
 
 }
+

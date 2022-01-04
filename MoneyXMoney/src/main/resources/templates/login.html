@@ -4,20 +4,42 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <title>Login - login</title>
-  <link th:href="@{/login.css}" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
 </head>
+
+<style>
+
+
+.option {
+
+font-family:'Bungee Inline', cursive;
+
+
+}
+
+
+input {
+
+margin-top: 6%;
+
+}
+
+.log{
+margin-top:-3%;
+
+}
+
+</style>
 <body>
 <div class="container-fluid text-center">
   <div>
-    <img class="img-fluid" th:src="@{/image.jpg}" />
+    <img class="img-fluid" src="image.jpg" />
   </div>
   <form th:action="@{/login}" method="post" style="max-width: 350px; margin: 0 auto;">
-
     <div th:if="${param.error}">
       <p class="text-danger">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
     </div>
@@ -26,8 +48,11 @@
       <p class="text-warning">You have been logged out.</p>
     </div>
 
+
     <div class="border border-secondary p-3 rounded">
-      <div class="titre"><p>Money X Money</p></div>
+      <div class="option bg-success d-inline-block py-2 px-3 rounded">
+        <span class="text-light">Money X Money</span>
+      </div>
       <div class="mail"> <p><input type="email" name="email" class="form-control" placeholder="E-mail" required autofocus/>
       </p>
         <p>
@@ -35,9 +60,9 @@
         </p></div>
       <div class="remember"><input type="checkbox" name="remember-me" /> Remember Me</div>
       <p>
-      <div class="log"><input type="submit" value="Login" class="btn btn-primary" /></div>
+      <div class="log"><input type="submit" value="Login" class="btn btn-success" /></div>
       </p>
-      <p> Do not have an account? <a href="/registration" th:href="@{/register}">Create your buddy account
+      <p> Do not have an account? <a href="/registration" th:href="@{/register}">Create your account
         here</a>.
       <p>
     </div>

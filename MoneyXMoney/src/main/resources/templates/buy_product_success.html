@@ -2,50 +2,95 @@
 <html lang="en" xmlns:th="http://www.thymleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="moneyfav.png"/>
     <link rel="stylesheet" href="buy_product_success.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <title>Buying Succeeded</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+            rel="stylesheet">
+
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous">
+
+    <title>Money X Money</title>
 </head>
 <body>
 <div class="container text-center">
-    <div>
-        <h3>
-            Enter your information to receive your product :<BR> <BR>
-            Entrez vos informations pour recevoir votre produit:<BR> <BR>
 
+    <h1>
+        Enter your information to receive your product :<br>
+        <br>
+        Entrez vos informations pour recevoir votre produit:<br>
+        <br>
 
+    </h1>
 
-            <div class="formulaire">
-                <form action="saveUser" method="post">
-                    <table>
-                        <tr>
-                            <td><label for="user-name">User Name</label></td>
-                            <td><input type="text" name="name"></input></td>
-                        </tr>
-                        <tr>
-                            <td><label for="address">Address</label></td>
-                            <td><input type="text" name="address"></input></td>
-                        </tr>
-                        <tr>
-                            <td><label for="productName">Product Name</label></td>
-                            <td><input type="text" name="productName"></input></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><input type="submit" value="Submit"></input></td>
-                        </tr>
-                    </table>
-            </div>
+    <div class="formulaire">
+        <form action="saveUser" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <label for="user-name">  &nbsp; &nbsp; Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="user-name" name="name"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address">  &nbsp; &nbsp; Address:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="address" name="address"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="productName">Product Name: &nbsp; </label>
+                    </td>
+                    <td>
+                        <input
+                                type="text"
+                                id="productName"
+                                name="productName"
+                                placeholder="Exemple: white T-Shirt"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td>
+                            <label for="clothingSize">Clothing Size: &nbsp; </label>
+                        </td>
+                        <td>
+                            <input
+                                    type="text"
+                                    id="clothingSize"
+                                    name="clothingSize"
+                                    placeholder="Exemple: XXL"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" class="btn btn-success" value="Submit"></input>
+                    </td>
 
+                </tr>
 
-
-
-
-        </h3>
-
+            </table>
+        </form>
     </div>
 
 </div>
+
 </body>
+
 </html>
