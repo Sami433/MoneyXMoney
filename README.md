@@ -10,5 +10,4 @@ L'URL par défaut est `http://localhost:8080/`.
 
 ## Base de donnée
 
-Crééz une base de donnée sql nommée "moneyxmoney"
-Configurez vos informations dans application properties
+Crééz une base de donnée sql nommée "moneyxmoney" et configurez vos informations (nom bd, mot de passe) dans application properties
